@@ -7,11 +7,7 @@ import os
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-try:
-    from models.cloud_vector_store import CloudVectorStoreManager as VectorStoreManager
-except ImportError:
-    from models.vector_store import VectorStoreManager
-
+from models.vector_store import VectorStoreManager
 from config.settings import settings
 
 logger = logging.getLogger(__name__)
