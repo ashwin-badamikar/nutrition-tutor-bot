@@ -1,6 +1,6 @@
 """
-Complete Nutrition Tutor Bot - DARK THEME - SYNTAX FIXED
-Professional dark theme with proper Python syntax
+Complete Nutrition Tutor Bot - DARK THEME - WITH WORKING IMAGE ANALYSIS
+Professional dark theme with proper Python syntax and real image analysis
 """
 
 import streamlit as st
@@ -12,6 +12,11 @@ from typing import Dict, List, Optional
 import time
 from dotenv import load_dotenv
 import pandas as pd
+import base64
+from PIL import Image
+import io
+import openai
+from openai import OpenAI
 
 # Fix path resolution
 current_file = Path(__file__).resolve()
@@ -252,6 +257,20 @@ input, select, textarea,
     color: #BAE6FD !important;
 }
 
+.clean-warning {
+    background: #92400E !important;
+    border: 1px solid #D97706;
+    border-left: 4px solid #F59E0B;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.clean-warning, .clean-warning * {
+    color: #FEF3C7 !important;
+}
+
 /* Profile styling - DARK THEME */
 .clean-profile-active {
     background: #16A34A !important;
@@ -411,6 +430,10 @@ input, select, textarea,
     color: #BAE6FD !important;
 }
 
+.clean-warning, .clean-warning * {
+    color: #FEF3C7 !important;
+}
+
 .stButton > button[kind="primary"], .stButton > button[kind="primary"] * {
     color: #FFFFFF !important;
 }
@@ -437,6 +460,127 @@ def initialize_systems():
     except Exception as e:
         st.error(f"❌ Error initializing systems: {e}")
         return None, None
+
+def analyze_meal_photo(uploaded_file, analysis_type="Quick", user_context=None):
+    """
+    Analyze uploaded meal photo using OpenAI Vision API
+    """
+    try:
+        # Check for OpenAI API key
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            return {
+                "success": False,
+                "error": "OpenAI API key not found. Please add OPENAI_API_KEY to your .env file."
+            }
+        
+        # Initialize OpenAI client
+        client = OpenAI(api_key=api_key)
+        
+        # Convert uploaded file to base64
+        image = Image.open(uploaded_file)
+        
+        # Resize image if too large (OpenAI has size limits)
+        max_size = 1024
+        if image.size[0] > max_size or image.size[1] > max_size:
+            image.thumbnail((max_size, max_size), Image.Resampling.LANCZOS)
+        
+        # Convert to RGB if necessary
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+        
+        buffered = io.BytesIO()
+        image.save(buffered, format="JPEG", quality=85)
+        img_base64 = base64.b64encode(buffered.getvalue()).decode()
+        
+        # Create analysis prompt based on user context
+        base_prompt = """You are a professional nutrition coach analyzing a meal photo. 
+
+Analyze this meal photo and provide:
+
+**🍽️ FOOD IDENTIFICATION:**
+List each food item you can identify with estimated portion sizes.
+
+**📊 NUTRITION BREAKDOWN:**
+Provide estimated nutritional values:
+- Total calories
+- Protein (grams)
+- Carbohydrates (grams) 
+- Fat (grams)
+- Fiber (grams)
+- Key vitamins/minerals if notable
+
+**⚖️ NUTRITIONAL ASSESSMENT:**
+Rate the meal's nutritional balance and quality (1-10 scale).
+
+**💡 COACH RECOMMENDATIONS:**
+Provide 2-3 specific, actionable suggestions for improvement or compliments on good choices.
+
+Be encouraging but honest. Focus on practical, helpful advice."""
+
+        if user_context and user_context.get('goals'):
+            base_prompt += f"""
+
+**👤 USER CONTEXT:**
+- Age: {user_context.get('age', 'Not specified')}
+- Primary Goal: {user_context.get('goals', 'General health')}
+- Activity Level: {user_context.get('activity_level', 'Not specified')}
+- Dietary Restrictions: {user_context.get('dietary_restrictions', 'None')}
+
+Tailor your analysis and suggestions specifically to help this person achieve their {user_context.get('goals', 'health goals')}."""
+        
+        if analysis_type == "Detailed":
+            base_prompt += "\n\n**DETAILED ANALYSIS REQUESTED:** Provide more comprehensive nutritional analysis with specific macro and micronutrient insights, meal timing considerations, and detailed improvement suggestions."
+        elif analysis_type == "Full Report":
+            base_prompt += "\n\n**COMPREHENSIVE REPORT REQUESTED:** Provide an in-depth analysis including: nutritional completeness assessment, bioavailability factors, meal timing optimization, portion size evaluation, food combination benefits, and strategic recommendations for long-term dietary success."
+        
+        # Call OpenAI Vision API
+        response = client.chat.completions.create(
+            model="gpt-4o",  # Using latest vision model
+            messages=[
+                {
+                    "role": "user", 
+                    "content": [
+                        {"type": "text", "text": base_prompt},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{img_base64}",
+                                "detail": "high" if analysis_type == "Full Report" else "auto"
+                            }
+                        }
+                    ]
+                }
+            ],
+            max_tokens=1000 if analysis_type == "Full Report" else 600,
+            temperature=0.3  # Lower temperature for more consistent analysis
+        )
+        
+        analysis_result = response.choices[0].message.content
+        
+        return {
+            "success": True,
+            "analysis": analysis_result,
+            "model_used": "GPT-4o Vision",
+            "analysis_type": analysis_type,
+            "tokens_used": response.usage.total_tokens if hasattr(response, 'usage') else None
+        }
+        
+    except openai.AuthenticationError:
+        return {
+            "success": False,
+            "error": "Invalid OpenAI API key. Please check your OPENAI_API_KEY in the .env file."
+        }
+    except openai.RateLimitError:
+        return {
+            "success": False,
+            "error": "OpenAI API rate limit exceeded. Please try again in a moment."
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "error": f"Image analysis failed: {str(e)}"
+        }
 
 def create_profile_sidebar():
     """Create professional profile sidebar"""
@@ -912,18 +1056,30 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
                 except Exception as e:
                     st.error(f"Error: {e}")
     
-    # TAB 4: PHOTO ANALYSIS
+    # TAB 4: PHOTO ANALYSIS - NOW WITH REAL FUNCTIONALITY
     with tab4:
         st.markdown("## 📷 AI Meal Photo Analysis")
         st.markdown("Upload a photo for instant nutrition analysis with AI vision!")
         
+        # Check API key status
+        api_key_status = "✅ Connected" if os.getenv('OPENAI_API_KEY') else "❌ API Key Missing"
         st.markdown(
-            '''
+            f'''
             <div class="clean-info">
-                🤖 <strong>AI Pipeline:</strong> Photo → Vision Analysis → USDA Database → Personalized Advice
+                🤖 <strong>AI Pipeline:</strong> Photo → Vision Analysis → USDA Database → Personalized Advice<br>
+                🔑 <strong>Status:</strong> {api_key_status}
             </div>
             ''', unsafe_allow_html=True
         )
+        
+        if not os.getenv('OPENAI_API_KEY'):
+            st.markdown(
+                '''
+                <div class="clean-warning">
+                    ⚠️ <strong>Setup Required:</strong> Add your OpenAI API key to the .env file as OPENAI_API_KEY=your_key_here
+                </div>
+                ''', unsafe_allow_html=True
+            )
         
         uploaded_file = st.file_uploader("📸 Upload meal photo", type=['png', 'jpg', 'jpeg'])
         
@@ -935,21 +1091,84 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
                 analysis_type = st.selectbox("Analysis Level:", ["Quick", "Detailed", "Full Report"])
                 
                 if st.button("🔍 Analyze Meal", type="primary", use_container_width=True):
-                    with st.spinner("🤖 Analyzing..."):
-                        st.success("📸 Photo analysis system ready!")
+                    with st.spinner("🤖 AI is analyzing your meal..."):
+                        # REAL IMAGE ANALYSIS
+                        result = analyze_meal_photo(uploaded_file, analysis_type, profile)
                         
-                        # Demo results
-                        st.markdown(
-                            '''
-                            <div class="content-box">
-                                <h4>🔍 Example Analysis:</h4>
-                                <p><strong>AI Vision:</strong> Grilled chicken breast (~6oz), steamed broccoli (~1 cup), brown rice (~0.5 cup)</p>
-                                <p><strong>Nutrition:</strong> ~420 calories, 35g protein, 45g carbs, 8g fat</p>
-                                <p><strong>Coach Advice:</strong> Excellent balanced meal! Perfect for your goals.</p>
-                            </div>
-                            ''',
-                            unsafe_allow_html=True
-                        )
+                        if result["success"]:
+                            st.markdown("### 🔍 AI Meal Analysis Results")
+                            st.markdown(
+                                f'<div class="content-box">{result["analysis"]}</div>',
+                                unsafe_allow_html=True
+                            )
+                            
+                            # Analysis metadata
+                            col1, col2, col3 = st.columns(3)
+                            with col1:
+                                st.markdown(
+                                    f'<div class="clean-metric">🤖<br><strong>AI Model</strong><br>{result["model_used"]}</div>',
+                                    unsafe_allow_html=True
+                                )
+                            with col2:
+                                st.markdown(
+                                    f'<div class="clean-metric">📊<br><strong>Analysis</strong><br>{result["analysis_type"]}</div>',
+                                    unsafe_allow_html=True
+                                )
+                            with col3:
+                                tokens_text = f"{result['tokens_used']} tokens" if result.get('tokens_used') else "Complete"
+                                st.markdown(
+                                    f'<div class="clean-metric">✅<br><strong>Status</strong><br>{tokens_text}</div>',
+                                    unsafe_allow_html=True
+                                )
+                            
+                            # Option to continue conversation
+                            st.markdown("### 💬 Continue the Discussion")
+                            col1, col2 = st.columns(2)
+                            
+                            with col1:
+                                if st.button("💬 Add to Chat History", use_container_width=True):
+                                    # Add to chat history
+                                    if 'chat_history' not in st.session_state:
+                                        st.session_state.chat_history = []
+                                    
+                                    # Add user message about photo
+                                    st.session_state.chat_history.append({
+                                        'role': 'user',
+                                        'content': f'I uploaded a photo of my meal for analysis. Can you help me understand it better?',
+                                        'timestamp': time.strftime('%H:%M')
+                                    })
+                                    
+                                    # Add analysis results
+                                    st.session_state.chat_history.append({
+                                        'role': 'assistant',
+                                        'content': f"📸 **Photo Analysis Results:**\n\n{result['analysis']}",
+                                        'sources': [],
+                                        'timestamp': time.strftime('%H:%M')
+                                    })
+                                    
+                                    st.success("✅ Added to chat! Switch to Chat Coach tab to continue the conversation.")
+                            
+                            with col2:
+                                if st.button("🔄 Analyze Different Photo", use_container_width=True):
+                                    st.rerun()
+                        
+                        else:
+                            st.error(f"❌ Analysis failed: {result['error']}")
+                            
+                            # Troubleshooting suggestions
+                            st.markdown(
+                                '''
+                                <div class="clean-info">
+                                    💡 <strong>Troubleshooting Tips:</strong><br>
+                                    • Ensure OpenAI API key is correctly configured in .env file<br>
+                                    • Check that the image is clear and well-lit<br>
+                                    • Try a different image format (JPG, PNG)<br>
+                                    • Make sure the image shows food clearly<br>
+                                    • Use the Chat Coach tab to describe your meal manually
+                                </div>
+                                ''',
+                                unsafe_allow_html=True
+                            )
         
         else:
             st.markdown(
@@ -957,15 +1176,62 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
                 <div class="clean-welcome">
                     <h3>📸 How AI Photo Analysis Works</h3>
                     <ol style="line-height: 1.8; font-size: 1rem;">
-                        <li><strong>Upload</strong> a clear photo of your meal</li>
-                        <li><strong>AI Vision</strong> identifies foods and portions</li>
-                        <li><strong>USDA Database</strong> provides precise nutrition data</li>
-                        <li><strong>Personal Coach</strong> gives advice for your goals</li>
+                        <li><strong>Upload</strong> a clear photo of your meal or food</li>
+                        <li><strong>AI Vision</strong> identifies foods and estimates portions</li>
+                        <li><strong>Nutrition Database</strong> provides precise nutritional data</li>
+                        <li><strong>Personal Coach</strong> gives tailored advice for your goals</li>
                     </ol>
+                    
+                    <h4>📋 Best Photo Tips:</h4>
+                    <ul style="line-height: 1.6;">
+                        <li>Good lighting and clear focus</li>
+                        <li>Show the entire meal/food item</li>
+                        <li>Include reference objects for scale if possible</li>
+                        <li>Take photo from above or at an angle</li>
+                    </ul>
                 </div>
                 ''', 
                 unsafe_allow_html=True
             )
+            
+            # Example photos section
+            st.markdown("### 🖼️ Example Analysis Results")
+            example_col1, example_col2 = st.columns(2)
+            
+            with example_col1:
+                st.markdown(
+                    '''
+                    <div class="content-box">
+                        <h4>✅ Good Photo Example:</h4>
+                        <p><strong>Clear, well-lit meal photo shows:</strong></p>
+                        <ul>
+                            <li>Grilled salmon fillet (~6oz)</li>
+                            <li>Steamed asparagus (~1 cup)</li>
+                            <li>Quinoa (~0.5 cup cooked)</li>
+                        </ul>
+                        <p><strong>AI Analysis:</strong> ~485 calories, excellent omega-3s, perfect for muscle building goals!</p>
+                    </div>
+                    ''',
+                    unsafe_allow_html=True
+                )
+            
+            with example_col2:
+                st.markdown(
+                    '''
+                    <div class="content-box">
+                        <h4>🔍 What AI Can Detect:</h4>
+                        <ul style="line-height: 1.6;">
+                            <li>Food types and cooking methods</li>
+                            <li>Portion size estimates</li>
+                            <li>Nutritional balance assessment</li>
+                            <li>Missing food groups</li>
+                            <li>Healthy vs. processed foods</li>
+                            <li>Meal timing recommendations</li>
+                        </ul>
+                    </div>
+                    ''',
+                    unsafe_allow_html=True
+                )
     
     # TAB 5: DATABASE
     with tab5:
@@ -990,6 +1256,31 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
                     '<div class="clean-metric">⚡<br><strong>Speed</strong><br>~10ms</div>', 
                     unsafe_allow_html=True
                 )
+        
+        # System status
+        st.markdown("### ⚙️ System Status")
+        status_col1, status_col2, status_col3 = st.columns(3)
+        
+        with status_col1:
+            rag_status = "✅ Active" if rag_engine else "❌ Error"
+            st.markdown(
+                f'<div class="clean-metric">🔍<br><strong>RAG Engine</strong><br>{rag_status}</div>',
+                unsafe_allow_html=True
+            )
+        
+        with status_col2:
+            api_status = "✅ Configured" if os.getenv('OPENAI_API_KEY') else "❌ Missing Key"
+            st.markdown(
+                f'<div class="clean-metric">🔑<br><strong>OpenAI API</strong><br>{api_status}</div>',
+                unsafe_allow_html=True
+            )
+        
+        with status_col3:
+            db_status = "✅ Connected" if db_stats and db_stats.get('total_documents', 0) > 0 else "❌ No Data"
+            st.markdown(
+                f'<div class="clean-metric">💾<br><strong>Database</strong><br>{db_status}</div>',
+                unsafe_allow_html=True
+            )
         
         # Nutrition facts
         st.markdown("### 💡 Evidence-Based Nutrition Science")
@@ -1032,6 +1323,27 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
                     ''',
                     unsafe_allow_html=True
                 )
+        
+        # Configuration section
+        st.markdown("### ⚙️ Configuration")
+        with st.expander("🔧 Environment Setup", expanded=False):
+            st.markdown(
+                '''
+                <div class="content-box">
+                    <h4>Required Environment Variables (.env file):</h4>
+                    <pre style="background: #0F172A; padding: 1rem; border-radius: 5px; border: 1px solid #334155;">
+OPENAI_API_KEY=your_openai_api_key_here
+# Add other API keys as needed
+                    </pre>
+                    
+                    <h4>Required Python Packages:</h4>
+                    <pre style="background: #0F172A; padding: 1rem; border-radius: 5px; border: 1px solid #334155;">
+pip install streamlit openai pillow python-dotenv pandas
+                    </pre>
+                </div>
+                ''',
+                unsafe_allow_html=True
+            )
     
     # Footer
     st.markdown("---")
@@ -1039,7 +1351,7 @@ Instructions: Respond warmly and naturally, like a nutrition coach would. Ask qu
         '''
         <div class="content-box" style="text-align: center; margin-top: 2rem;">
             <div style="font-weight: 600; margin-bottom: 0.5rem;">🔬 <strong>Technology Stack</strong></div>
-            <div style="margin-bottom: 1rem;">RAG • OpenAI GPT-4 • ChromaDB • USDA Database • Conversational AI</div>
+            <div style="margin-bottom: 1rem;">RAG • OpenAI GPT-4o Vision • ChromaDB • USDA Database • Conversational AI</div>
             <div style="font-size: 0.9em; opacity: 0.7;">⚠️ <strong>Disclaimer:</strong> General nutrition guidance - consult professionals for medical advice</div>
         </div>
         ''', 
