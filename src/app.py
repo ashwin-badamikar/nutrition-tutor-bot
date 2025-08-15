@@ -419,23 +419,42 @@ input, select, textarea,
 """, unsafe_allow_html=True)
 
 @st.cache_resource
+@st.cache_resource
 def initialize_systems():
-    """Initialize RAG system"""
+    """Initialize RAG system with cloud-compatible vector store"""
     try:
         from models.rag_engine import RAGQueryEngine
-        from models.vector_store import VectorStoreManager
+        from models.cloud_vector_store import CloudVectorStoreManager
         
+        # Initialize cloud-compatible vector store
+        vector_store = CloudVectorStoreManager(use_local_embeddings=True)
+        
+        # Load documents (will create sample data if files not available)
+        with st.spinner("🔄 Initializing nutrition database..."):
+            success = vector_store.load_and_embed_documents()
+            if not success:
+                st.error("❌ Could not initialize nutrition database.")
+                return None, None
+        
+        # Initialize RAG engine with cloud vector store
         rag_engine = RAGQueryEngine(use_local_embeddings=True)
-        vector_store = VectorStoreManager(use_local_embeddings=True)
+        # Update the RAG engine to use our cloud vector store
+        rag_engine.vector_store = vector_store
+        
+        # Get database stats
         stats = vector_store.get_collection_stats()
         
         if stats.get("total_documents", 0) == 0:
-            st.error("❌ Nutrition database not found.")
+            st.error("❌ No documents loaded in nutrition database.")
             return None, None
         
+        st.success(f"✅ Nutrition database ready with {stats['total_documents']} documents!")
+        
         return rag_engine, stats
+        
     except Exception as e:
         st.error(f"❌ Error initializing systems: {e}")
+        logger.error(f"System initialization error: {e}")
         return None, None
 
 def create_profile_sidebar():
