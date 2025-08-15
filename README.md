@@ -672,7 +672,7 @@ python test_focused_performance.py
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for complete terms.
 
 ---
 
@@ -700,4 +700,5 @@ Special thanks to the open-source AI/ML community for providing the foundational
 ### Team Contact
 - **Ashwin Badamikar**: [badamikar.a@northeastern.edu]
 - **Madhura Adadande**: [adadande.m@northeastern.edu]
+
 
