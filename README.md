@@ -28,9 +28,9 @@ Our system uniquely combines **conversational AI**, **retrieval-augmented genera
 
 🌐 **Try it now**: [Live Demo](https://nutrition-tutor-bot.streamlit.app/) *(Deployment URL will be added)*
 
-📺 **Demo Video**: [10-Minute Walkthrough](link-to-video) *(Video will be added)*
+📺 **Demo Video**: [10-Minute Walkthrough](link-to-video)
 
-📄 **Project Website**: [Project Showcase](https://ashwin-badamikar.github.io/nutrition-tutor-bot/) *(Website will be added)*
+📄 **Project Website**: [Project Showcase](https://ashwin-badamikar.github.io/nutrition-tutor-bot/)
 
 ---
 
@@ -700,6 +700,7 @@ Special thanks to the open-source AI/ML community for providing the foundational
 ### Team Contact
 - **Ashwin Badamikar**: [badamikar.a@northeastern.edu]
 - **Madhura Adadande**: [adadande.m@northeastern.edu]
+
 
 
 
