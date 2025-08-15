@@ -1,43 +1,42 @@
-# Core Framework
-streamlit>=1.28.0
-fastapi>=0.104.0
-uvicorn>=0.24.0
+# FINAL REQUIREMENTS.TXT FOR DEPLOYMENT
+# Based on your working Nutrition Tutor Bot
 
-# AI/ML Libraries
+# Core Framework (REQUIRED)
+streamlit>=1.28.0
+
+# AI/ML Libraries (REQUIRED)
 openai>=1.3.0
-langchain>=0.0.350
-langchain-openai>=0.0.2
-langchain-community>=0.0.8
 tiktoken>=0.5.0
 
-# Vector Database
-pinecone-client>=2.2.4
-chromadb>=0.4.18
-faiss-cpu>=1.7.4
+# Vector Database (REQUIRED - Your app uses ChromaDB)
+chromadb>=0.4.22
+sentence-transformers>=2.2.2
 
-# Data Processing
+# Data Processing (REQUIRED)
 pandas>=2.1.0
 numpy>=1.24.0
 requests>=2.31.0
-beautifulsoup4>=4.12.0
 python-dotenv>=1.0.0
 
-# Text Processing
-sentence-transformers>=2.2.2
-nltk>=3.8.1
+# Image Processing (REQUIRED for photo analysis)
+pillow>=10.0.0
 
-# Visualization
-plotly>=5.17.0
-matplotlib>=3.7.0
-
-# Utilities
+# Configuration (REQUIRED for settings)
 pydantic>=2.5.0
 pydantic-settings>=2.1.0
-python-multipart>=0.0.6
-aiofiles>=23.2.1
 
-# Development
+# Testing (OPTIONAL - for your tests)
 pytest>=7.4.0
-black>=23.10.0
-flake8>=6.1.0
-pillow>=10.0.0
+pytest-benchmark>=4.0.0
+
+# Additional packages you installed during development
+pathlib
+json
+logging
+typing
+time
+base64
+io
+
+# Cloud deployment fixes
+sqlite3
