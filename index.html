@@ -219,11 +219,72 @@
             padding: 2rem;
             border-radius: 15px;
             font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            font-size: 0.85rem;
+            line-height: 1.3;
             overflow-x: auto;
             margin: 2rem 0;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            color: #e0e0e0;
+            white-space: pre;
+        }
+
+        .architecture-visual {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .arch-layer {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .arch-layer h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .arch-components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .arch-component {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .arch-component h4 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .arch-component ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .arch-component li {
+            padding: 0.2rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .arch-component li::before {
+            content: "•";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
         }
 
         /* Performance Metrics */
@@ -460,53 +521,165 @@
     <section id="architecture" class="architecture">
         <div class="container">
             <h2 class="section-title" style="color: white;">System Architecture</h2>
-            <div class="architecture-diagram">
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                            NUTRITION TUTOR BOT ARCHITECTURE                      │
-└─────────────────────────────────────────────────────────────────────────────────┘
+            
+            <!-- Visual Architecture -->
+            <div class="architecture-visual">
+                <!-- User Interface Layer -->
+                <div class="arch-layer">
+                    <h3><i class="fas fa-desktop"></i> User Interface Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <h4>💬 Chat Interface</h4>
+                            <ul>
+                                <li>Natural conversation flow</li>
+                                <li>Context-aware responses</li>
+                                <li>Real-time interaction</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>📊 Analytics Dashboard</h4>
+                            <ul>
+                                <li>Performance metrics</li>
+                                <li>Usage statistics</li>
+                                <li>System health monitoring</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>🔍 Database Search</h4>
+                            <ul>
+                                <li>Semantic similarity search</li>
+                                <li>Instant results</li>
+                                <li>Filtered nutrition data</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>📷 Photo Upload</h4>
+                            <ul>
+                                <li>Image processing</li>
+                                <li>Food identification</li>
+                                <li>Nutritional analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                                 USER INTERFACE                                   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  📱 Streamlit Web App                                                           │
-│  ├── 💬 Chat Interface        ├── 📊 Analytics Dashboard                        │
-│  ├── 🔍 Database Search       ├── 👤 User Profile Manager                       │
-│  └── 📷 Photo Upload          └── ⚙️ Settings Panel                            │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              CORE AI ENGINE                                      │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  🧠 CONVERSATIONAL AI COACH                    📷 MULTIMODAL PROCESSOR          │
-│  ┌─────────────────────────────┐              ┌─────────────────────────────┐   │
-│  │ • Context Management       │              │ • GPT-4 Vision             │   │
-│  │ • Personalized Responses   │              │ • Food Identification      │   │
-│  │ • Conversation Memory      │              │ • Portion Estimation       │   │
-│  │ • Dynamic Prompting        │              │ • Cross-Modal Integration  │   │
-│  └─────────────────────────────┘              └─────────────────────────────┘   │
-│                                                                                 │
-│  🔍 RAG QUERY ENGINE                                                            │
-│  ┌─────────────────────────────────────────────────────────────────────────┐   │
-│  │ Query Processing → Context Retrieval → Response Generation              │   │
-│  │ • Intent Recognition  • Semantic Similarity  • Dynamic Integration     │   │
-│  │ • Context Extraction  • Metadata Filtering   • Source Attribution      │   │
-│  │ • Query Optimization  • Top-K Retrieval      • Response Generation     │   │
-│  └─────────────────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              DATA & STORAGE LAYER                                │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  📚 VECTOR DATABASE (ChromaDB)         🌐 EXTERNAL APIs                         │
-│  ┌─────────────────────────────┐      ┌─────────────────────────────┐          │
-│  │ • 66 Nutrition Documents    │      │ 🤖 OpenAI GPT-4             │          │
-│  │ • Vector Embeddings         │      │ 🍎 USDA FoodData Central    │          │
-│  │ • Metadata Storage          │      │ 📊 Real-time Updates        │          │
-│  │ • Semantic Search Index     │      │ 🔒 Secure API Integration   │          │
-│  └─────────────────────────────┘      └─────────────────────────────┘          │
-└─────────────────────────────────────────────────────────────────────────────────┘
+                <!-- Core AI Engine -->
+                <div class="arch-layer">
+                    <h3><i class="fas fa-brain"></i> Core AI Engine</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <h4>🧠 Conversational AI Coach</h4>
+                            <ul>
+                                <li>Context management</li>
+                                <li>Personalized responses</li>
+                                <li>Conversation memory</li>
+                                <li>Dynamic prompting</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>📷 Multimodal Processor</h4>
+                            <ul>
+                                <li>GPT-4 Vision integration</li>
+                                <li>Food identification</li>
+                                <li>Portion estimation</li>
+                                <li>Cross-modal analysis</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>🔍 RAG Query Engine</h4>
+                            <ul>
+                                <li>Query processing (10.1ms)</li>
+                                <li>Vector similarity search</li>
+                                <li>Context retrieval</li>
+                                <li>Response generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Storage Layer -->
+                <div class="arch-layer">
+                    <h3><i class="fas fa-database"></i> Data & Storage Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <h4>📚 Vector Database (ChromaDB)</h4>
+                            <ul>
+                                <li>66 nutrition documents</li>
+                                <li>Vector embeddings</li>
+                                <li>Metadata storage</li>
+                                <li>Semantic search index</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>🤖 OpenAI GPT-4</h4>
+                            <ul>
+                                <li>Text generation</li>
+                                <li>Vision processing</li>
+                                <li>Conversational AI</li>
+                                <li>Context understanding</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>🍎 USDA FoodData Central</h4>
+                            <ul>
+                                <li>400K+ food database</li>
+                                <li>Real-time nutrition data</li>
+                                <li>Comprehensive nutrients</li>
+                                <li>Verified food information</li>
+                            </ul>
+                        </div>
+                        <div class="arch-component">
+                            <h4>📊 Local Processing</h4>
+                            <ul>
+                                <li>Sentence transformers</li>
+                                <li>Local embeddings</li>
+                                <li>Privacy protection</li>
+                                <li>Fast vector operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Flow Diagram -->
+            <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                <h3 style="color: var(--primary-color); text-align: center; margin-bottom: 1.5rem;">Data Flow Architecture</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
+                            <i class="fas fa-user" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <strong>User Input</strong>
+                    </div>
+                    <div style="color: var(--primary-color); font-size: 1.5rem;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: var(--accent-color); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
+                            <i class="fas fa-search" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <strong>Query Analysis</strong>
+                    </div>
+                    <div style="color: var(--primary-color); font-size: 1.5rem;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
+                            <i class="fas fa-database" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <strong>Vector Search</strong>
+                    </div>
+                    <div style="color: var(--primary-color); font-size: 1.5rem;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
+                            <i class="fas fa-brain" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <strong>AI Generation</strong>
+                    </div>
+                    <div style="color: var(--primary-color); font-size: 1.5rem;">→</div>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: var(--accent-color); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
+                            <i class="fas fa-comments" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <strong>Response</strong>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
