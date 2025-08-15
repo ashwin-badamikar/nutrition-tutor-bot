@@ -1,0 +1,1261 @@
+[
+  {
+    "id": "food_F001",
+    "type": "food_item",
+    "content": "Apple, Raw is a balanced fruits that provides 52 calories per 100g serving. Macronutrient profile: 0.3g protein, 14.0g carbohydrates, 0.2g fat. Low calorie food, suitable for weight control. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Apple, Raw",
+      "category": "Fruits",
+      "macro_category": "Balanced",
+      "calories": 52,
+      "protein": 0.3,
+      "carbs": 14.0,
+      "fat": 0.2,
+      "fiber": 2.4,
+      "vitamin_c": 4.6,
+      "calcium": 6,
+      "iron": 0.12,
+      "nutrient_density": 0.3606666666666667,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F002",
+    "type": "food_item",
+    "content": "Banana, Raw is a carb-rich fruits that provides 89 calories per 100g serving. Macronutrient profile: 1.1g protein, 23.0g carbohydrates, 0.3g fat. Low calorie food, suitable for weight control. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Banana, Raw",
+      "category": "Fruits",
+      "macro_category": "Carb-Rich",
+      "calories": 89,
+      "protein": 1.1,
+      "carbs": 23.0,
+      "fat": 0.3,
+      "fiber": 2.6,
+      "vitamin_c": 8.7,
+      "calcium": 5,
+      "iron": 0.26,
+      "nutrient_density": 0.49166666666666664,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F003",
+    "type": "food_item",
+    "content": "Orange, Raw is a balanced fruits that provides 47 calories per 100g serving. Macronutrient profile: 0.9g protein, 12.0g carbohydrates, 0.1g fat. Excellent source of vitamin C (53.2mg). Very low calorie option, great for weight management. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Orange, Raw",
+      "category": "Fruits",
+      "macro_category": "Balanced",
+      "calories": 47,
+      "protein": 0.9,
+      "carbs": 12.0,
+      "fat": 0.1,
+      "fiber": 2.4,
+      "vitamin_c": 53.2,
+      "calcium": 40,
+      "iron": 0.1,
+      "nutrient_density": 1.306,
+      "health_benefits": "",
+      "nutrition_highlights": "High Vitamin C"
+    }
+  },
+  {
+    "id": "food_F004",
+    "type": "food_item",
+    "content": "Blueberries, Raw is a balanced fruits that provides 57 calories per 100g serving. Macronutrient profile: 0.7g protein, 14.0g carbohydrates, 0.3g fat. Low calorie food, suitable for weight control. Health benefits include: High Antioxidants. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Blueberries, Raw",
+      "category": "Fruits",
+      "macro_category": "Balanced",
+      "calories": 57,
+      "protein": 0.7,
+      "carbs": 14.0,
+      "fat": 0.3,
+      "fiber": 2.4,
+      "vitamin_c": 9.7,
+      "calcium": 6,
+      "iron": 0.28,
+      "nutrient_density": 0.4776666666666667,
+      "health_benefits": "High Antioxidants",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F005",
+    "type": "food_item",
+    "content": "Strawberries, Raw is a balanced fruits that provides 32 calories per 100g serving. Macronutrient profile: 0.7g protein, 8.0g carbohydrates, 0.3g fat. Excellent source of vitamin C (58.8mg). Very low calorie option, great for weight management. Health benefits include: High Antioxidants. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Strawberries, Raw",
+      "category": "Fruits",
+      "macro_category": "Balanced",
+      "calories": 32,
+      "protein": 0.7,
+      "carbs": 8.0,
+      "fat": 0.3,
+      "fiber": 2.0,
+      "vitamin_c": 58.8,
+      "calcium": 16,
+      "iron": 0.41,
+      "nutrient_density": 1.3023333333333331,
+      "health_benefits": "High Antioxidants",
+      "nutrition_highlights": "High Vitamin C"
+    }
+  },
+  {
+    "id": "food_F006",
+    "type": "food_item",
+    "content": "Avocado, Raw is a fat-rich fruits that provides 160 calories per 100g serving. Macronutrient profile: 2.0g protein, 9.0g carbohydrates, 15.0g fat. High in dietary fiber (6.7g). Health benefits include: Heart Healthy. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Avocado, Raw",
+      "category": "Fruits",
+      "macro_category": "Fat-Rich",
+      "calories": 160,
+      "protein": 2.0,
+      "carbs": 9.0,
+      "fat": 15.0,
+      "fiber": 6.7,
+      "vitamin_c": 10.0,
+      "calcium": 12,
+      "iron": 0.55,
+      "nutrient_density": 1.0116666666666667,
+      "health_benefits": "Heart Healthy",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F007",
+    "type": "food_item",
+    "content": "Mango, Raw is a carb-rich fruits that provides 60 calories per 100g serving. Macronutrient profile: 0.8g protein, 15.0g carbohydrates, 0.4g fat. Excellent source of vitamin C (36.4mg). Low calorie food, suitable for weight control. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Mango, Raw",
+      "category": "Fruits",
+      "macro_category": "Carb-Rich",
+      "calories": 60,
+      "protein": 0.8,
+      "carbs": 15.0,
+      "fat": 0.4,
+      "fiber": 1.6,
+      "vitamin_c": 36.4,
+      "calcium": 11,
+      "iron": 0.16,
+      "nutrient_density": 0.8513333333333333,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F008",
+    "type": "food_item",
+    "content": "Pineapple, Raw is a balanced fruits that provides 50 calories per 100g serving. Macronutrient profile: 0.5g protein, 13.0g carbohydrates, 0.1g fat. Excellent source of vitamin C (47.8mg). Low calorie food, suitable for weight control. Perfect for snacking, smoothies, or adding natural sweetness to meals. ",
+    "metadata": {
+      "food_name": "Pineapple, Raw",
+      "category": "Fruits",
+      "macro_category": "Balanced",
+      "calories": 50,
+      "protein": 0.5,
+      "carbs": 13.0,
+      "fat": 0.1,
+      "fiber": 1.4,
+      "vitamin_c": 47.8,
+      "calcium": 13,
+      "iron": 0.29,
+      "nutrient_density": 1.029,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F009",
+    "type": "food_item",
+    "content": "Broccoli, Raw is a balanced vegetables that provides 34 calories per 100g serving. Macronutrient profile: 2.8g protein, 7.0g carbohydrates, 0.4g fat. Excellent source of vitamin C (89.2mg). Very low calorie option, great for weight management. Health benefits include: Bone Health. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Broccoli, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 34,
+      "protein": 2.8,
+      "carbs": 7.0,
+      "fat": 0.4,
+      "fiber": 2.6,
+      "vitamin_c": 89.2,
+      "calcium": 47,
+      "iron": 0.73,
+      "nutrient_density": 2.0883333333333334,
+      "health_benefits": "Bone Health",
+      "nutrition_highlights": "High Vitamin C"
+    }
+  },
+  {
+    "id": "food_F010",
+    "type": "food_item",
+    "content": "Spinach, Raw is a balanced vegetables that provides 23 calories per 100g serving. Macronutrient profile: 2.9g protein, 4.0g carbohydrates, 0.4g fat. Excellent source of vitamin C (28.1mg). Good source of calcium (99mg). Contains 2.71mg iron. Very low calorie option, great for weight management. Health benefits include: High Antioxidants. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Spinach, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 23,
+      "protein": 2.9,
+      "carbs": 4.0,
+      "fat": 0.4,
+      "fiber": 2.2,
+      "vitamin_c": 28.1,
+      "calcium": 99,
+      "iron": 2.71,
+      "nutrient_density": 1.4053333333333335,
+      "health_benefits": "High Antioxidants",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F011",
+    "type": "food_item",
+    "content": "Kale, Raw is a balanced vegetables that provides 49 calories per 100g serving. Macronutrient profile: 4.3g protein, 9.0g carbohydrates, 0.9g fat. Excellent source of vitamin C (120.0mg). Good source of calcium (150mg). Contains 1.47mg iron. High in dietary fiber (3.6g). Very low calorie option, great for weight management. Health benefits include: High Antioxidants, Bone Health. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Kale, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 49,
+      "protein": 4.3,
+      "carbs": 9.0,
+      "fat": 0.9,
+      "fiber": 3.6,
+      "vitamin_c": 120.0,
+      "calcium": 150,
+      "iron": 1.47,
+      "nutrient_density": 3.179,
+      "health_benefits": "High Antioxidants; Bone Health",
+      "nutrition_highlights": "High Vitamin C; High Calcium"
+    }
+  },
+  {
+    "id": "food_F012",
+    "type": "food_item",
+    "content": "Carrots, Raw is a balanced vegetables that provides 41 calories per 100g serving. Macronutrient profile: 0.9g protein, 10.0g carbohydrates, 0.2g fat. Very low calorie option, great for weight management. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Carrots, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 41,
+      "protein": 0.9,
+      "carbs": 10.0,
+      "fat": 0.2,
+      "fiber": 2.8,
+      "vitamin_c": 5.9,
+      "calcium": 33,
+      "iron": 0.3,
+      "nutrient_density": 0.5543333333333333,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F013",
+    "type": "food_item",
+    "content": "Bell Peppers, Red is a balanced vegetables that provides 31 calories per 100g serving. Macronutrient profile: 1.0g protein, 7.0g carbohydrates, 0.3g fat. Excellent source of vitamin C (190.0mg). Very low calorie option, great for weight management. Health benefits include: High Antioxidants. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Bell Peppers, Red",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 31,
+      "protein": 1.0,
+      "carbs": 7.0,
+      "fat": 0.3,
+      "fiber": 2.5,
+      "vitamin_c": 190.0,
+      "calcium": 7,
+      "iron": 0.43,
+      "nutrient_density": 3.523,
+      "health_benefits": "High Antioxidants",
+      "nutrition_highlights": "High Vitamin C"
+    }
+  },
+  {
+    "id": "food_F014",
+    "type": "food_item",
+    "content": "Sweet Potato, Raw is a carb-rich vegetables that provides 86 calories per 100g serving. Macronutrient profile: 1.6g protein, 20.0g carbohydrates, 0.1g fat. Low calorie food, suitable for weight control. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Sweet Potato, Raw",
+      "category": "Vegetables",
+      "macro_category": "Carb-Rich",
+      "calories": 86,
+      "protein": 1.6,
+      "carbs": 20.0,
+      "fat": 0.1,
+      "fiber": 3.0,
+      "vitamin_c": 2.4,
+      "calcium": 30,
+      "iron": 0.61,
+      "nutrient_density": 0.565,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F015",
+    "type": "food_item",
+    "content": "Cauliflower, Raw is a balanced vegetables that provides 25 calories per 100g serving. Macronutrient profile: 1.9g protein, 5.0g carbohydrates, 0.3g fat. Excellent source of vitamin C (48.2mg). Very low calorie option, great for weight management. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Cauliflower, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 25,
+      "protein": 1.9,
+      "carbs": 5.0,
+      "fat": 0.3,
+      "fiber": 2.0,
+      "vitamin_c": 48.2,
+      "calcium": 22,
+      "iron": 0.42,
+      "nutrient_density": 1.1946666666666668,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F016",
+    "type": "food_item",
+    "content": "Asparagus, Raw is a balanced vegetables that provides 20 calories per 100g serving. Macronutrient profile: 2.2g protein, 4.0g carbohydrates, 0.1g fat. Contains 2.14mg iron. Very low calorie option, great for weight management. Excellent for salads, stir-fries, or as a nutritious side dish. ",
+    "metadata": {
+      "food_name": "Asparagus, Raw",
+      "category": "Vegetables",
+      "macro_category": "Balanced",
+      "calories": 20,
+      "protein": 2.2,
+      "carbs": 4.0,
+      "fat": 0.1,
+      "fiber": 2.1,
+      "vitamin_c": 5.6,
+      "calcium": 24,
+      "iron": 2.14,
+      "nutrient_density": 0.6853333333333333,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F017",
+    "type": "food_item",
+    "content": "Chicken Breast, Skinless is a protein-rich poultry that provides 165 calories per 100g serving. Macronutrient profile: 31.0g protein, 0.0g carbohydrates, 3.6g fat. Excellent for muscle building and repair. Ideal for post-workout meals or as a main protein source. ",
+    "metadata": {
+      "food_name": "Chicken Breast, Skinless",
+      "category": "Poultry",
+      "macro_category": "Protein-Rich",
+      "calories": 165,
+      "protein": 31.0,
+      "carbs": 0.0,
+      "fat": 3.6,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 15,
+      "iron": 0.9,
+      "nutrient_density": 1.3800000000000001,
+      "health_benefits": "",
+      "nutrition_highlights": "High Protein"
+    }
+  },
+  {
+    "id": "food_F018",
+    "type": "food_item",
+    "content": "Salmon, Atlantic is a fat-rich seafood that provides 208 calories per 100g serving. Macronutrient profile: 25.4g protein, 0.0g carbohydrates, 12.4g fat. Excellent for muscle building and repair. Health benefits include: Heart Healthy. ",
+    "metadata": {
+      "food_name": "Salmon, Atlantic",
+      "category": "Seafood",
+      "macro_category": "Fat-Rich",
+      "calories": 208,
+      "protein": 25.4,
+      "carbs": 0.0,
+      "fat": 12.4,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 12,
+      "iron": 0.8,
+      "nutrient_density": 1.1360000000000001,
+      "health_benefits": "Heart Healthy",
+      "nutrition_highlights": "High Protein"
+    }
+  },
+  {
+    "id": "food_F019",
+    "type": "food_item",
+    "content": "Tuna, Yellowfin is a protein-rich seafood that provides 108 calories per 100g serving. Macronutrient profile: 24.4g protein, 0.0g carbohydrates, 0.5g fat. Excellent for muscle building and repair. Ideal for post-workout meals or as a main protein source. ",
+    "metadata": {
+      "food_name": "Tuna, Yellowfin",
+      "category": "Seafood",
+      "macro_category": "Protein-Rich",
+      "calories": 108,
+      "protein": 24.4,
+      "carbs": 0.0,
+      "fat": 0.5,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 3,
+      "iron": 0.73,
+      "nutrient_density": 1.059,
+      "health_benefits": "",
+      "nutrition_highlights": "High Protein"
+    }
+  },
+  {
+    "id": "food_F020",
+    "type": "food_item",
+    "content": "Lean Ground Beef is a fat-rich meat that provides 250 calories per 100g serving. Macronutrient profile: 26.0g protein, 0.0g carbohydrates, 15.0g fat. Contains 2.6mg iron. Excellent for muscle building and repair. ",
+    "metadata": {
+      "food_name": "Lean Ground Beef",
+      "category": "Meat",
+      "macro_category": "Fat-Rich",
+      "calories": 250,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "fat": 15.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 18,
+      "iron": 2.6,
+      "nutrient_density": 1.36,
+      "health_benefits": "",
+      "nutrition_highlights": "High Protein"
+    }
+  },
+  {
+    "id": "food_F021",
+    "type": "food_item",
+    "content": "Eggs, Whole is a fat-rich dairy & eggs that provides 155 calories per 100g serving. Macronutrient profile: 13.0g protein, 1.1g carbohydrates, 11.0g fat. Good source of calcium (56mg). Contains 1.75mg iron. Good protein source for muscle maintenance. ",
+    "metadata": {
+      "food_name": "Eggs, Whole",
+      "category": "Dairy & Eggs",
+      "macro_category": "Fat-Rich",
+      "calories": 155,
+      "protein": 13.0,
+      "carbs": 1.1,
+      "fat": 11.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 56,
+      "iron": 1.75,
+      "nutrient_density": 0.8816666666666666,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F022",
+    "type": "food_item",
+    "content": "Greek Yogurt, Plain is a balanced dairy & eggs that provides 59 calories per 100g serving. Macronutrient profile: 10.0g protein, 3.6g carbohydrates, 0.4g fat. Good source of calcium (110mg). Low calorie food, suitable for weight control. Health benefits include: Bone Health. ",
+    "metadata": {
+      "food_name": "Greek Yogurt, Plain",
+      "category": "Dairy & Eggs",
+      "macro_category": "Balanced",
+      "calories": 59,
+      "protein": 10.0,
+      "carbs": 3.6,
+      "fat": 0.4,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 110,
+      "iron": 0.04,
+      "nutrient_density": 0.7706666666666666,
+      "health_benefits": "Bone Health",
+      "nutrition_highlights": "High Calcium"
+    }
+  },
+  {
+    "id": "food_F023",
+    "type": "food_item",
+    "content": "Cottage Cheese, Low-Fat is a balanced dairy & eggs that provides 72 calories per 100g serving. Macronutrient profile: 12.0g protein, 2.7g carbohydrates, 1.0g fat. Good source of calcium (61mg). Good protein source for muscle maintenance. Low calorie food, suitable for weight control. ",
+    "metadata": {
+      "food_name": "Cottage Cheese, Low-Fat",
+      "category": "Dairy & Eggs",
+      "macro_category": "Balanced",
+      "calories": 72,
+      "protein": 12.0,
+      "carbs": 2.7,
+      "fat": 1.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 61,
+      "iron": 0.14,
+      "nutrient_density": 0.6973333333333334,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F024",
+    "type": "food_item",
+    "content": "Tofu, Firm is a protein-rich plant proteins that provides 144 calories per 100g serving. Macronutrient profile: 17.3g protein, 3.0g carbohydrates, 9.0g fat. Good source of calcium (372mg). Contains 2.7mg iron. Good protein source for muscle maintenance. Ideal for post-workout meals or as a main protein source. ",
+    "metadata": {
+      "food_name": "Tofu, Firm",
+      "category": "Plant Proteins",
+      "macro_category": "Protein-Rich",
+      "calories": 144,
+      "protein": 17.3,
+      "carbs": 3.0,
+      "fat": 9.0,
+      "fiber": 2.3,
+      "vitamin_c": 0.2,
+      "calcium": 372,
+      "iron": 2.7,
+      "nutrient_density": 2.4353333333333333,
+      "health_benefits": "",
+      "nutrition_highlights": "High Calcium"
+    }
+  },
+  {
+    "id": "food_F025",
+    "type": "food_item",
+    "content": "Quinoa, Cooked is a carb-rich grains that provides 120 calories per 100g serving. Macronutrient profile: 4.4g protein, 22.0g carbohydrates, 1.9g fat. Contains 1.5mg iron. ",
+    "metadata": {
+      "food_name": "Quinoa, Cooked",
+      "category": "Grains",
+      "macro_category": "Carb-Rich",
+      "calories": 120,
+      "protein": 4.4,
+      "carbs": 22.0,
+      "fat": 1.9,
+      "fiber": 2.8,
+      "vitamin_c": 0.0,
+      "calcium": 17,
+      "iron": 1.5,
+      "nutrient_density": 0.6626666666666666,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F026",
+    "type": "food_item",
+    "content": "Brown Rice, Cooked is a carb-rich grains that provides 112 calories per 100g serving. Macronutrient profile: 2.6g protein, 23.0g carbohydrates, 0.9g fat. ",
+    "metadata": {
+      "food_name": "Brown Rice, Cooked",
+      "category": "Grains",
+      "macro_category": "Carb-Rich",
+      "calories": 112,
+      "protein": 2.6,
+      "carbs": 23.0,
+      "fat": 0.9,
+      "fiber": 1.8,
+      "vitamin_c": 0.0,
+      "calcium": 10,
+      "iron": 0.4,
+      "nutrient_density": 0.35733333333333334,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F027",
+    "type": "food_item",
+    "content": "Oats, Rolled Dry is a carb-rich grains that provides 389 calories per 100g serving. Macronutrient profile: 16.9g protein, 66.0g carbohydrates, 6.9g fat. Good source of calcium (54mg). Contains 4.7mg iron. High in dietary fiber (10.6g). Good protein source for muscle maintenance. Health benefits include: Heart Healthy. ",
+    "metadata": {
+      "food_name": "Oats, Rolled Dry",
+      "category": "Grains",
+      "macro_category": "Carb-Rich",
+      "calories": 389,
+      "protein": 16.9,
+      "carbs": 66.0,
+      "fat": 6.9,
+      "fiber": 10.6,
+      "vitamin_c": 0.0,
+      "calcium": 54,
+      "iron": 4.7,
+      "nutrient_density": 2.386,
+      "health_benefits": "Heart Healthy",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F028",
+    "type": "food_item",
+    "content": "Whole Wheat Bread is a carb-rich grains that provides 247 calories per 100g serving. Macronutrient profile: 13.0g protein, 41.0g carbohydrates, 4.2g fat. Good source of calcium (107mg). Contains 2.5mg iron. High in dietary fiber (6.0g). Good protein source for muscle maintenance. ",
+    "metadata": {
+      "food_name": "Whole Wheat Bread",
+      "category": "Grains",
+      "macro_category": "Carb-Rich",
+      "calories": 247,
+      "protein": 13.0,
+      "carbs": 41.0,
+      "fat": 4.2,
+      "fiber": 6.0,
+      "vitamin_c": 0.0,
+      "calcium": 107,
+      "iron": 2.5,
+      "nutrient_density": 1.7266666666666668,
+      "health_benefits": "",
+      "nutrition_highlights": "High Fiber; High Calcium"
+    }
+  },
+  {
+    "id": "food_F029",
+    "type": "food_item",
+    "content": "Almonds, Raw is a fat-rich nuts & seeds that provides 579 calories per 100g serving. Macronutrient profile: 21.2g protein, 22.0g carbohydrates, 49.9g fat. Good source of calcium (269mg). Contains 3.7mg iron. High in dietary fiber (12.5g). Excellent for muscle building and repair. Calorie-dense food, use in moderation for weight management. Health benefits include: Bone Health. Great for snacking, adding to yogurt, or incorporating into baked goods. ",
+    "metadata": {
+      "food_name": "Almonds, Raw",
+      "category": "Nuts & Seeds",
+      "macro_category": "Fat-Rich",
+      "calories": 579,
+      "protein": 21.2,
+      "carbs": 22.0,
+      "fat": 49.9,
+      "fiber": 12.5,
+      "vitamin_c": 0.0,
+      "calcium": 269,
+      "iron": 3.7,
+      "nutrient_density": 3.3646666666666665,
+      "health_benefits": "Bone Health",
+      "nutrition_highlights": "High Protein; High Fiber; High Calcium"
+    }
+  },
+  {
+    "id": "food_F030",
+    "type": "food_item",
+    "content": "Walnuts, Raw is a fat-rich nuts & seeds that provides 654 calories per 100g serving. Macronutrient profile: 15.2g protein, 14.0g carbohydrates, 65.2g fat. Good source of calcium (98mg). Contains 2.9mg iron. High in dietary fiber (6.7g). Good protein source for muscle maintenance. Calorie-dense food, use in moderation for weight management. Health benefits include: Heart Healthy. Great for snacking, adding to yogurt, or incorporating into baked goods. ",
+    "metadata": {
+      "food_name": "Walnuts, Raw",
+      "category": "Nuts & Seeds",
+      "macro_category": "Fat-Rich",
+      "calories": 654,
+      "protein": 15.2,
+      "carbs": 14.0,
+      "fat": 65.2,
+      "fiber": 6.7,
+      "vitamin_c": 1.3,
+      "calcium": 98,
+      "iron": 2.9,
+      "nutrient_density": 1.9163333333333334,
+      "health_benefits": "Heart Healthy",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F031",
+    "type": "food_item",
+    "content": "Chia Seeds is a fat-rich nuts & seeds that provides 486 calories per 100g serving. Macronutrient profile: 16.5g protein, 42.0g carbohydrates, 30.7g fat. Good source of calcium (631mg). Contains 7.7mg iron. High in dietary fiber (34.4g). Good protein source for muscle maintenance. Calorie-dense food, use in moderation for weight management. Health benefits include: Bone Health. Great for snacking, adding to yogurt, or incorporating into baked goods. ",
+    "metadata": {
+      "food_name": "Chia Seeds",
+      "category": "Nuts & Seeds",
+      "macro_category": "Fat-Rich",
+      "calories": 486,
+      "protein": 16.5,
+      "carbs": 42.0,
+      "fat": 30.7,
+      "fiber": 34.4,
+      "vitamin_c": 1.6,
+      "calcium": 631,
+      "iron": 7.7,
+      "nutrient_density": 7.0,
+      "health_benefits": "Bone Health",
+      "nutrition_highlights": "High Fiber; High Calcium"
+    }
+  },
+  {
+    "id": "food_F032",
+    "type": "food_item",
+    "content": "Pumpkin Seeds is a fat-rich nuts & seeds that provides 559 calories per 100g serving. Macronutrient profile: 30.2g protein, 11.0g carbohydrates, 49.0g fat. Contains 8.8mg iron. High in dietary fiber (6.0g). Excellent for muscle building and repair. Calorie-dense food, use in moderation for weight management. Great for snacking, adding to yogurt, or incorporating into baked goods. ",
+    "metadata": {
+      "food_name": "Pumpkin Seeds",
+      "category": "Nuts & Seeds",
+      "macro_category": "Fat-Rich",
+      "calories": 559,
+      "protein": 30.2,
+      "carbs": 11.0,
+      "fat": 49.0,
+      "fiber": 6.0,
+      "vitamin_c": 1.9,
+      "calcium": 46,
+      "iron": 8.8,
+      "nutrient_density": 2.873,
+      "health_benefits": "",
+      "nutrition_highlights": "High Protein; High Fiber"
+    }
+  },
+  {
+    "id": "food_F033",
+    "type": "food_item",
+    "content": "Black Beans, Cooked is a carb-rich legumes that provides 132 calories per 100g serving. Macronutrient profile: 8.9g protein, 24.0g carbohydrates, 0.5g fat. Contains 2.1mg iron. High in dietary fiber (8.7g). ",
+    "metadata": {
+      "food_name": "Black Beans, Cooked",
+      "category": "Legumes",
+      "macro_category": "Carb-Rich",
+      "calories": 132,
+      "protein": 8.9,
+      "carbs": 24.0,
+      "fat": 0.5,
+      "fiber": 8.7,
+      "vitamin_c": 0.0,
+      "calcium": 27,
+      "iron": 2.1,
+      "nutrient_density": 1.526,
+      "health_benefits": "",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F034",
+    "type": "food_item",
+    "content": "Chickpeas, Cooked is a carb-rich legumes that provides 164 calories per 100g serving. Macronutrient profile: 8.9g protein, 27.0g carbohydrates, 2.6g fat. Contains 2.9mg iron. High in dietary fiber (7.6g). ",
+    "metadata": {
+      "food_name": "Chickpeas, Cooked",
+      "category": "Legumes",
+      "macro_category": "Carb-Rich",
+      "calories": 164,
+      "protein": 8.9,
+      "carbs": 27.0,
+      "fat": 2.6,
+      "fiber": 7.6,
+      "vitamin_c": 1.3,
+      "calcium": 49,
+      "iron": 2.9,
+      "nutrient_density": 1.5910000000000002,
+      "health_benefits": "",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F035",
+    "type": "food_item",
+    "content": "Lentils, Cooked is a carb-rich legumes that provides 116 calories per 100g serving. Macronutrient profile: 9.0g protein, 20.0g carbohydrates, 0.4g fat. Contains 3.3mg iron. High in dietary fiber (7.9g). ",
+    "metadata": {
+      "food_name": "Lentils, Cooked",
+      "category": "Legumes",
+      "macro_category": "Carb-Rich",
+      "calories": 116,
+      "protein": 9.0,
+      "carbs": 20.0,
+      "fat": 0.4,
+      "fiber": 7.9,
+      "vitamin_c": 1.5,
+      "calcium": 19,
+      "iron": 3.3,
+      "nutrient_density": 1.568333333333333,
+      "health_benefits": "",
+      "nutrition_highlights": "High Fiber"
+    }
+  },
+  {
+    "id": "food_F036",
+    "type": "food_item",
+    "content": "Milk, 2% Fat is a balanced dairy & eggs that provides 50 calories per 100g serving. Macronutrient profile: 3.3g protein, 4.8g carbohydrates, 2.0g fat. Good source of calcium (113mg). Low calorie food, suitable for weight control. ",
+    "metadata": {
+      "food_name": "Milk, 2% Fat",
+      "category": "Dairy & Eggs",
+      "macro_category": "Balanced",
+      "calories": 50,
+      "protein": 3.3,
+      "carbs": 4.8,
+      "fat": 2.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 113,
+      "iron": 0.03,
+      "nutrient_density": 0.5116666666666666,
+      "health_benefits": "",
+      "nutrition_highlights": "High Calcium"
+    }
+  },
+  {
+    "id": "food_F037",
+    "type": "food_item",
+    "content": "Cheddar Cheese is a fat-rich dairy & eggs that provides 403 calories per 100g serving. Macronutrient profile: 25.0g protein, 1.3g carbohydrates, 33.0g fat. Good source of calcium (721mg). Excellent for muscle building and repair. Calorie-dense food, use in moderation for weight management. ",
+    "metadata": {
+      "food_name": "Cheddar Cheese",
+      "category": "Dairy & Eggs",
+      "macro_category": "Fat-Rich",
+      "calories": 403,
+      "protein": 25.0,
+      "carbs": 1.3,
+      "fat": 33.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 721,
+      "iron": 0.68,
+      "nutrient_density": 3.4713333333333334,
+      "health_benefits": "",
+      "nutrition_highlights": "High Protein; High Calcium"
+    }
+  },
+  {
+    "id": "food_F038",
+    "type": "food_item",
+    "content": "Olive Oil, Extra Virgin is a fat-rich oils & fats that provides 884 calories per 100g serving. Macronutrient profile: 0.0g protein, 0.0g carbohydrates, 100.0g fat. Calorie-dense food, use in moderation for weight management. Health benefits include: Heart Healthy. ",
+    "metadata": {
+      "food_name": "Olive Oil, Extra Virgin",
+      "category": "Oils & Fats",
+      "macro_category": "Fat-Rich",
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 100.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 1,
+      "iron": 0.56,
+      "nutrient_density": 0.05933333333333334,
+      "health_benefits": "Heart Healthy",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "food_F039",
+    "type": "food_item",
+    "content": "Coconut Oil is a fat-rich oils & fats that provides 862 calories per 100g serving. Macronutrient profile: 0.0g protein, 0.0g carbohydrates, 100.0g fat. Calorie-dense food, use in moderation for weight management. ",
+    "metadata": {
+      "food_name": "Coconut Oil",
+      "category": "Oils & Fats",
+      "macro_category": "Fat-Rich",
+      "calories": 862,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 100.0,
+      "fiber": 0.0,
+      "vitamin_c": 0.0,
+      "calcium": 0,
+      "iron": 0.04,
+      "nutrient_density": 0.004,
+      "health_benefits": "",
+      "nutrition_highlights": NaN
+    }
+  },
+  {
+    "id": "knowledge_0",
+    "type": "nutrition_knowledge",
+    "content": "Protein Requirements by Activity Level: Sedentary adults need 0.8g protein per kg body weight daily. Recreational athletes require 1.0-1.4g/kg, competitive endurance athletes need 1.2-1.4g/kg, and strength athletes need 1.6-2.0g/kg. Distribute protein evenly across meals for optimal muscle protein synthesis.",
+    "metadata": {
+      "topic": "Protein Requirements by Activity Level",
+      "category": "Protein Guidelines",
+      "tags": [
+        "protein",
+        "requirements",
+        "athletes",
+        "muscle synthesis"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_1",
+    "type": "nutrition_knowledge",
+    "content": "Carbohydrate Loading Strategy: For endurance events longer than 90 minutes, consume 7-12g carbohydrates per kg body weight for 1-3 days before competition. Include easily digestible sources like pasta, rice, and bananas while reducing fiber intake 24 hours prior.",
+    "metadata": {
+      "topic": "Carbohydrate Loading Strategy",
+      "category": "Sports Nutrition",
+      "tags": [
+        "carb loading",
+        "endurance",
+        "competition",
+        "glycogen"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_2",
+    "type": "nutrition_knowledge",
+    "content": "Essential Fatty Acids: Omega-3 fatty acids (EPA and DHA) reduce inflammation and support heart health. Aim for 250-500mg combined EPA/DHA daily from fatty fish, algae supplements, or fish oil. Include ALA from walnuts, flaxseeds, and chia seeds.",
+    "metadata": {
+      "topic": "Essential Fatty Acids",
+      "category": "Fat Guidelines",
+      "tags": [
+        "omega-3",
+        "EPA",
+        "DHA",
+        "inflammation",
+        "heart health"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_3",
+    "type": "nutrition_knowledge",
+    "content": "Iron Absorption Enhancement: Vitamin C increases iron absorption from plant sources by up to 4x. Pair iron-rich foods like spinach with citrus fruits, bell peppers, or tomatoes. Avoid tea and coffee with iron-rich meals as tannins inhibit absorption.",
+    "metadata": {
+      "topic": "Iron Absorption Enhancement",
+      "category": "Micronutrients",
+      "tags": [
+        "iron",
+        "vitamin C",
+        "absorption",
+        "anemia prevention"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_4",
+    "type": "nutrition_knowledge",
+    "content": "Calcium and Bone Health: Adults need 1000-1200mg calcium daily. Best absorbed in doses of 500mg or less. Vitamin D, magnesium, and vitamin K2 are essential co-factors. Weight-bearing exercise is crucial for calcium utilization in bones.",
+    "metadata": {
+      "topic": "Calcium and Bone Health",
+      "category": "Micronutrients",
+      "tags": [
+        "calcium",
+        "bone health",
+        "vitamin D",
+        "magnesium",
+        "exercise"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_5",
+    "type": "nutrition_knowledge",
+    "content": "B12 Deficiency Prevention: Vitamin B12 is only found in animal products and fortified foods. Vegans should supplement with 250\u03bcg daily or 2500\u03bcg weekly. Symptoms of deficiency include fatigue, memory issues, and neurological problems.",
+    "metadata": {
+      "topic": "B12 Deficiency Prevention",
+      "category": "Micronutrients",
+      "tags": [
+        "B12",
+        "vegan",
+        "supplementation",
+        "deficiency",
+        "neurological"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_6",
+    "type": "nutrition_knowledge",
+    "content": "Sustainable Weight Loss Rate: Healthy weight loss is 1-2 pounds per week, requiring a 500-1000 calorie daily deficit. Losing faster than 2 lbs/week increases muscle loss risk. Combine moderate calorie restriction (20-25% below maintenance) with strength training.",
+    "metadata": {
+      "topic": "Sustainable Weight Loss Rate",
+      "category": "Weight Management",
+      "tags": [
+        "weight loss",
+        "caloric deficit",
+        "muscle preservation",
+        "sustainability"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_7",
+    "type": "nutrition_knowledge",
+    "content": "Metabolism and Meal Frequency: Total daily calorie intake matters more than meal timing for weight management. Whether eating 3 large meals or 6 small meals, metabolic rate remains similar. Choose a pattern that supports adherence and hunger control.",
+    "metadata": {
+      "topic": "Metabolism and Meal Frequency",
+      "category": "Weight Management",
+      "tags": [
+        "metabolism",
+        "meal frequency",
+        "weight management",
+        "adherence"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_8",
+    "type": "nutrition_knowledge",
+    "content": "Muscle Gain Nutrition: Building muscle requires a slight caloric surplus (200-500 calories above maintenance), adequate protein (1.6-2.2g/kg body weight), and progressive resistance training. Aim for 20-40g protein within 2 hours post-workout.",
+    "metadata": {
+      "topic": "Muscle Gain Nutrition",
+      "category": "Weight Management",
+      "tags": [
+        "muscle gain",
+        "caloric surplus",
+        "protein timing",
+        "resistance training"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_9",
+    "type": "nutrition_knowledge",
+    "content": "Hydration Assessment: Monitor urine color to assess hydration: pale yellow indicates good hydration, dark yellow suggests dehydration. Weigh yourself before and after exercise - drink 150% of weight lost through sweat for complete rehydration.",
+    "metadata": {
+      "topic": "Hydration Assessment",
+      "category": "Hydration",
+      "tags": [
+        "hydration",
+        "urine color",
+        "sweat loss",
+        "rehydration"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_10",
+    "type": "nutrition_knowledge",
+    "content": "Electrolyte Balance: During exercise longer than 60 minutes, replace sodium (200-300mg per hour) and potassium. Natural sources include bananas (potassium) and salted nuts (sodium). Sports drinks are beneficial for activities over 90 minutes.",
+    "metadata": {
+      "topic": "Electrolyte Balance",
+      "category": "Hydration",
+      "tags": [
+        "electrolytes",
+        "sodium",
+        "potassium",
+        "endurance exercise"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_11",
+    "type": "nutrition_knowledge",
+    "content": "Pregnancy Nutrition Needs: Pregnant women need an additional 340-450 calories in 2nd/3rd trimesters. Key nutrients include folic acid (400-600\u03bcg), iron (27mg), calcium (1000mg), and DHA (200mg). Limit caffeine to 200mg daily.",
+    "metadata": {
+      "topic": "Pregnancy Nutrition Needs",
+      "category": "Special Populations",
+      "tags": [
+        "pregnancy",
+        "folic acid",
+        "iron",
+        "DHA",
+        "caffeine"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_12",
+    "type": "nutrition_knowledge",
+    "content": "Aging and Nutrition: Adults over 50 need more protein (1.2-1.6g/kg) to prevent sarcopenia, more vitamin B12 due to decreased absorption, and vitamin D supplementation (800-1000 IU). Stay hydrated as thirst sensation decreases with age.",
+    "metadata": {
+      "topic": "Aging and Nutrition",
+      "category": "Special Populations",
+      "tags": [
+        "aging",
+        "sarcopenia",
+        "protein needs",
+        "B12",
+        "vitamin D"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_13",
+    "type": "nutrition_knowledge",
+    "content": "Complete Plant Proteins: Combine complementary proteins throughout the day: grains with legumes (rice and beans), nuts with grains (almond butter on toast), or seeds with legumes. Quinoa, chia seeds, and hemp seeds are complete proteins.",
+    "metadata": {
+      "topic": "Complete Plant Proteins",
+      "category": "Plant-Based",
+      "tags": [
+        "plant protein",
+        "complementary proteins",
+        "complete proteins",
+        "vegan"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_14",
+    "type": "nutrition_knowledge",
+    "content": "Plant-Based Iron Sources: Best plant iron sources include lentils, tofu, dark leafy greens, pumpkin seeds, and fortified cereals. Combine with vitamin C foods and avoid tea/coffee with meals. Cast iron cooking can increase iron content of foods.",
+    "metadata": {
+      "topic": "Plant-Based Iron Sources",
+      "category": "Plant-Based",
+      "tags": [
+        "plant iron",
+        "vitamin C",
+        "lentils",
+        "leafy greens",
+        "iron absorption"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_15",
+    "type": "nutrition_knowledge",
+    "content": "Balanced Plate Method: Fill half your plate with non-starchy vegetables, one quarter with lean protein, and one quarter with complex carbohydrates. Add healthy fats like avocado, nuts, or olive oil. This method automatically balances macronutrients and controls portions.",
+    "metadata": {
+      "topic": "Balanced Plate Method",
+      "category": "Meal Planning",
+      "tags": [
+        "plate method",
+        "portion control",
+        "balanced meals",
+        "vegetables"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_16",
+    "type": "nutrition_knowledge",
+    "content": "Meal Prep Strategies: Batch cook proteins, grains, and roasted vegetables on weekends. Pre-cut fruits and vegetables for easy snacking. Prepare 3-4 days of meals at once to maintain freshness. Use glass containers for better food safety and reheating.",
+    "metadata": {
+      "topic": "Meal Prep Strategies",
+      "category": "Meal Planning",
+      "tags": [
+        "meal prep",
+        "batch cooking",
+        "food safety",
+        "time management"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_17",
+    "type": "nutrition_knowledge",
+    "content": "Pre-Workout Nutrition Timing: Eat a complete meal 3-4 hours before exercise, or a light snack 30-60 minutes prior. Focus on easily digestible carbohydrates with minimal fiber, fat, and protein. Examples: banana with small amount of nut butter, or oatmeal with berries.",
+    "metadata": {
+      "topic": "Pre-Workout Nutrition Timing",
+      "category": "Sports Nutrition",
+      "tags": [
+        "pre-workout",
+        "meal timing",
+        "carbohydrates",
+        "digestibility"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_18",
+    "type": "nutrition_knowledge",
+    "content": "Post-Workout Recovery Window: The 'anabolic window' is wider than once thought - muscle protein synthesis remains elevated for 24-48 hours post-exercise. However, consuming protein within 2 hours optimizes recovery, especially if the pre-workout meal was 4+ hours prior.",
+    "metadata": {
+      "topic": "Post-Workout Recovery Window",
+      "category": "Sports Nutrition",
+      "tags": [
+        "post-workout",
+        "protein synthesis",
+        "recovery",
+        "anabolic window"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_19",
+    "type": "nutrition_knowledge",
+    "content": "Proper Food Storage: Refrigerate perishables within 2 hours (1 hour if temperature >90\u00b0F). Store raw meat on bottom shelf to prevent drips. Keep refrigerator at 40\u00b0F or below and freezer at 0\u00b0F. Use FIFO (first in, first out) for pantry items.",
+    "metadata": {
+      "topic": "Proper Food Storage",
+      "category": "Food Safety",
+      "tags": [
+        "food storage",
+        "refrigeration",
+        "food safety",
+        "FIFO",
+        "temperature"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "knowledge_20",
+    "type": "nutrition_knowledge",
+    "content": "Nutrient Preservation: Steam or microwave vegetables to preserve water-soluble vitamins. Store fruits and vegetables in proper humidity conditions - most vegetables prefer high humidity, most fruits prefer low humidity. Minimize exposure to light, air, and heat.",
+    "metadata": {
+      "topic": "Nutrient Preservation",
+      "category": "Food Safety",
+      "tags": [
+        "nutrient preservation",
+        "cooking methods",
+        "storage conditions",
+        "vitamins"
+      ],
+      "content_type": "guideline"
+    }
+  },
+  {
+    "id": "recipe_0",
+    "type": "recipe_combination",
+    "content": "High-Protein Breakfast Bowl: A protein-rich breakfast combining Greek yogurt with antioxidant berries and healthy fats from nuts and seeds. Provides sustained energy and supports muscle maintenance. Main ingredients: Greek Yogurt, Blueberries, Almonds, Chia Seeds.",
+    "metadata": {
+      "recipe_name": "High-Protein Breakfast Bowl",
+      "ingredients": [
+        "Greek Yogurt",
+        "Blueberries",
+        "Almonds",
+        "Chia Seeds"
+      ],
+      "category": "Breakfast Recipes",
+      "nutrition_focus": "High Protein, Antioxidants",
+      "content_type": "recipe"
+    }
+  },
+  {
+    "id": "recipe_1",
+    "type": "recipe_combination",
+    "content": "Post-Workout Recovery Smoothie: Optimal post-workout nutrition combining quick carbs from banana, protein from yogurt, and micronutrients from spinach. Perfect 3:1 carb to protein ratio for recovery. Main ingredients: Banana, Greek Yogurt, Spinach, Chia Seeds.",
+    "metadata": {
+      "recipe_name": "Post-Workout Recovery Smoothie",
+      "ingredients": [
+        "Banana",
+        "Greek Yogurt",
+        "Spinach",
+        "Chia Seeds"
+      ],
+      "category": "Sports Nutrition",
+      "nutrition_focus": "Recovery, Protein, Carbohydrates",
+      "content_type": "recipe"
+    }
+  },
+  {
+    "id": "recipe_2",
+    "type": "recipe_combination",
+    "content": "Heart-Healthy Salad: A heart-healthy meal rich in omega-3 fatty acids from salmon and walnuts, monounsaturated fats from avocado and olive oil, plus antioxidants from kale. Main ingredients: Salmon, Avocado, Kale, Walnuts, Olive Oil.",
+    "metadata": {
+      "recipe_name": "Heart-Healthy Salad",
+      "ingredients": [
+        "Salmon",
+        "Avocado",
+        "Kale",
+        "Walnuts",
+        "Olive Oil"
+      ],
+      "category": "Main Meals",
+      "nutrition_focus": "Heart Health, Omega-3, Antioxidants",
+      "content_type": "recipe"
+    }
+  },
+  {
+    "id": "template_0",
+    "type": "meal_template",
+    "content": "Weight Loss Meal Template: For sustainable weight loss, create meals with lean protein (25-30% calories), non-starchy vegetables (unlimited), moderate complex carbs (25-30% calories), and healthy fats (20-25% calories). Examples: Grilled chicken with roasted vegetables and quinoa, or salmon salad with avocado.",
+    "metadata": {
+      "template_name": "Weight Loss Meal Template",
+      "category": "Meal Planning",
+      "tags": [
+        "weight loss",
+        "meal planning",
+        "macronutrients"
+      ],
+      "content_type": "template"
+    }
+  },
+  {
+    "id": "template_1",
+    "type": "meal_template",
+    "content": "Muscle Building Meal Template: For muscle gain, ensure adequate protein (1.6-2.2g/kg body weight), sufficient carbohydrates for energy (45-55% calories), and healthy fats (20-30% calories). Include protein at every meal and snack. Examples: Oatmeal with protein powder and berries, or lean beef with sweet potato.",
+    "metadata": {
+      "template_name": "Muscle Building Meal Template",
+      "category": "Meal Planning",
+      "tags": [
+        "muscle building",
+        "protein",
+        "meal planning"
+      ],
+      "content_type": "template"
+    }
+  },
+  {
+    "id": "template_2",
+    "type": "meal_template",
+    "content": "Anti-Inflammatory Meal Template: Focus on colorful vegetables, fatty fish, nuts, seeds, and olive oil while limiting processed foods and added sugars. Examples: Turmeric-spiced salmon with roasted rainbow vegetables, or a spinach salad with walnuts and berries.",
+    "metadata": {
+      "template_name": "Anti-Inflammatory Meal Template",
+      "category": "Meal Planning",
+      "tags": [
+        "anti-inflammatory",
+        "omega-3",
+        "antioxidants"
+      ],
+      "content_type": "template"
+    }
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "topic": "Protein Requirements",
+    "content": "The Recommended Dietary Allowance (RDA) for protein is 0.8 grams per kilogram of body weight for sedentary adults. Athletes may need 1.2-2.0 g/kg. Complete proteins contain all essential amino acids.",
+    "category": "Macronutrients",
+    "tags": [
+      "protein",
+      "RDA",
+      "amino acids",
+      "athletes"
+    ]
+  },
+  {
+    "topic": "Hydration Guidelines",
+    "content": "The Academy of Nutrition and Dietetics recommends about 15.5 cups (3.7 liters) of fluids daily for men and 11.5 cups (2.7 liters) for women. This includes water from food and beverages.",
+    "category": "Hydration",
+    "tags": [
+      "water",
+      "hydration",
+      "daily intake",
+      "fluids"
+    ]
+  },
+  {
+    "topic": "Antioxidant Foods",
+    "content": "Blueberries, dark chocolate, pecans, and artichokes are among the highest antioxidant foods. Antioxidants help protect cells from oxidative stress and may reduce inflammation.",
+    "category": "Phytonutrients",
+    "tags": [
+      "antioxidants",
+      "blueberries",
+      "inflammation",
+      "oxidative stress"
+    ]
+  },
+  {
+    "topic": "Meal Timing",
+    "content": "Eating protein within 2 hours post-workout optimizes muscle protein synthesis. Pre-workout meals should be consumed 1-3 hours before exercise and be rich in carbohydrates with moderate protein.",
+    "category": "Sports Nutrition",
+    "tags": [
+      "meal timing",
+      "post-workout",
+      "pre-workout",
+      "muscle synthesis"
+    ]
+  },
+  {
+    "topic": "Weight Loss Guidelines",
+    "content": "A safe rate of weight loss is 1-2 pounds per week. This typically requires a caloric deficit of 500-1000 calories per day through diet and exercise combined.",
+    "category": "Weight Management",
+    "tags": [
+      "weight loss",
+      "caloric deficit",
+      "safe rate",
+      "diet"
+    ]
+  }
+]

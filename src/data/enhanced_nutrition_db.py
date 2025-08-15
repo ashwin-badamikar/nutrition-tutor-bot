@@ -1,0 +1,71 @@
+import json
+from typing import List, Dict
+from pathlib import Path  # Add this import
+
+def create_enhanced_nutrition_database() -> List[Dict]:
+    """Create a comprehensive nutrition database with practical information"""
+    
+    enhanced_db = [
+        # Macro and Micronutrient Guidelines
+        {
+            "topic": "Daily Protein Needs",
+            "content": "Protein needs vary by activity level: Sedentary adults need 0.8g/kg body weight, recreational athletes need 1.0-1.4g/kg, and competitive athletes need 1.2-2.0g/kg. High-quality sources include lean meats, fish, eggs, dairy, legumes, and quinoa.",
+            "category": "Protein Guidelines",
+            "tags": ["protein", "daily requirements", "athletes", "sources"]
+        },
+        {
+            "topic": "Carbohydrate Timing",
+            "content": "For optimal performance, consume 30-60g carbohydrates 1-4 hours before exercise. Post-workout, aim for 0.5-1.0g carbs per kg body weight within 30 minutes to replenish glycogen stores.",
+            "category": "Sports Nutrition",
+            "tags": ["carbohydrates", "pre-workout", "post-workout", "glycogen"]
+        },
+        {
+            "topic": "Healthy Fats",
+            "content": "Omega-3 fatty acids from fatty fish, walnuts, and flaxseeds reduce inflammation. Monounsaturated fats from olive oil, avocados, and nuts support heart health. Aim for 20-35% of calories from healthy fats.",
+            "category": "Fat Guidelines",
+            "tags": ["omega-3", "monounsaturated", "heart health", "inflammation"]
+        },
+        {
+            "topic": "Portion Control",
+            "content": "Use the plate method: Fill half your plate with vegetables, one quarter with lean protein, and one quarter with whole grains. A serving of protein is about the size of your palm, and a serving of carbs fits in your cupped hand.",
+            "category": "Portion Guidelines",
+            "tags": ["portion control", "plate method", "serving sizes"]
+        },
+        {
+            "topic": "Meal Planning for Weight Loss",
+            "content": "Create a moderate caloric deficit of 500-750 calories daily for 1-2 lb weekly loss. Focus on high-protein foods (25-30% calories), moderate carbs (40-45%), and healthy fats (25-30%). Include plenty of vegetables for volume and nutrients.",
+            "category": "Weight Management",
+            "tags": ["weight loss", "caloric deficit", "macronutrient distribution"]
+        },
+        {
+            "topic": "Hydration and Performance",
+            "content": "Dehydration of just 2% body weight can impair performance. Drink 17-20 oz water 2-3 hours before exercise, 8 oz every 15-20 minutes during exercise, and 150% of fluid lost through sweat post-exercise.",
+            "category": "Hydration",
+            "tags": ["hydration", "performance", "exercise", "fluid replacement"]
+        },
+        {
+            "topic": "Micronutrient Powerhouses",
+            "content": "Dark leafy greens provide folate, iron, and vitamin K. Citrus fruits are high in vitamin C. Fatty fish offers vitamin D and B12. Nuts and seeds provide vitamin E and magnesium. Colorful vegetables ensure diverse phytonutrients.",
+            "category": "Micronutrients",
+            "tags": ["vitamins", "minerals", "dark leafy greens", "phytonutrients"]
+        }
+    ]
+    
+    return enhanced_db
+
+def save_enhanced_database():
+    """Save the enhanced database to file"""
+    db = create_enhanced_nutrition_database()
+    
+    # Save to processed data
+    output_path = Path("../data/processed/enhanced_nutrition_db.json")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(output_path, "w") as f:
+        json.dump(db, f, indent=2)
+    
+    print(f"✅ Enhanced nutrition database saved with {len(db)} entries")
+    return db
+
+if __name__ == "__main__":
+    save_enhanced_database()

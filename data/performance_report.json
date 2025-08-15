@@ -1,0 +1,39 @@
+{
+  "test_timestamp": "2025-08-14 20:54:26",
+  "system_overview": {
+    "database_documents": 66,
+    "avg_response_time_seconds": 12.52286033333803,
+    "system_reliability_score": 1.0
+  },
+  "performance_breakdown": {
+    "vector_search": {
+      "database_size": 66,
+      "avg_search_time_ms": 10.116740001831204,
+      "max_search_time_ms": 11.3032000081148,
+      "min_search_time_ms": 8.895799997844733,
+      "avg_results_returned": 5,
+      "avg_relevance_score": 0.009178235530853273,
+      "total_queries_tested": 5
+    },
+    "rag_pipeline": {
+      "avg_response_time_s": 12.52286033333803,
+      "max_response_time_s": 18.02821530000074,
+      "min_response_time_s": 4.426821500004735,
+      "avg_sources_used": 0.3333333333333333,
+      "avg_quality_score": 1.0,
+      "response_styles_tested": 3,
+      "total_queries_tested": 3
+    },
+    "system_reliability": {
+      "error_handling_tests": 3,
+      "passed_error_tests": 3,
+      "graceful_fallbacks": 2,
+      "reliability_score": 1.0
+    }
+  },
+  "benchmarks": {
+    "vector_search_target": "< 100ms",
+    "rag_response_target": "< 10s",
+    "reliability_target": "> 0.8"
+  }
+}

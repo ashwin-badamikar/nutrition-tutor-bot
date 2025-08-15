@@ -1,0 +1,6 @@
+food_name,food_code,food_category,calories,protein_g,carbs_g,fat_g,fiber_g,vitamin_c_mg,protein_per_calorie,fiber_per_calorie
+"Apple, Raw",F001,Fruits,52,0.3,14,0.2,2.4,4.6,0.005660377358490566,0.045283018867924525
+"Chicken Breast, Skinless",F002,Poultry,165,31.0,0,3.6,0.0,0.0,0.18674698795180722,0.0
+"Broccoli, Raw",F003,Vegetables,34,2.8,7,0.4,2.6,89.2,0.08,0.07428571428571429
+"Salmon, Atlantic",F004,Seafood,208,25.4,0,12.4,0.0,0.0,0.12153110047846889,0.0
+"Quinoa, Cooked",F005,Grains,120,4.4,22,1.9,2.8,0.0,0.03636363636363637,0.023140495867768594
