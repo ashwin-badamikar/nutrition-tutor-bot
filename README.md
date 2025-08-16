@@ -26,7 +26,7 @@ Our system uniquely combines **conversational AI**, **retrieval-augmented genera
 
 ## 🚀 Live Demo
 
-📺 **Demo Video**: [10-Minute Walkthrough](link-to-video)
+📺 **Demo Video**: [10-Minute Walkthrough](https://teams.microsoft.com/l/message/19:0721ccda-873f-449b-82d0-0f64c50d3370_8564fbf8-2c95-4209-8f35-59385dbd3677@unq.gbl.spaces/1755317129588?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 📄 **Project Website**: [Project Showcase](https://ashwin-badamikar.github.io/nutrition-tutor-bot/)
 
@@ -703,6 +703,7 @@ Special thanks to the open-source AI/ML community for providing the foundational
 ### Team Contact
 - **Ashwin Badamikar**: [badamikar.a@northeastern.edu]
 - **Madhura Adadande**: [adadande.m@northeastern.edu]
+
 
 
 
