@@ -64,6 +64,9 @@ Our system uniquely combines **conversational AI**, **retrieval-augmented genera
 
 # 🏗️ System Architecture
 
+<img width="1360" height="1023" alt="image" src="https://github.com/user-attachments/assets/09f02c2f-3d76-4d1a-a514-978ec2eeae14" />
+
+
 ## Architecture Overview
 
 ```
@@ -700,6 +703,7 @@ Special thanks to the open-source AI/ML community for providing the foundational
 ### Team Contact
 - **Ashwin Badamikar**: [badamikar.a@northeastern.edu]
 - **Madhura Adadande**: [adadande.m@northeastern.edu]
+
 
 
 
